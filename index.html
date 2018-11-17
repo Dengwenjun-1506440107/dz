@@ -48,7 +48,7 @@
       <nav class="navbar navbar-default navbar-inverse" role="navigation">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="demo-navbar">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -57,17 +57,17 @@
                 <a class="navbar-brand" href="#">MV下载网</a>
             </div>
 
-            <div class="collapse navbar-collapse" id="#bs-example-navbar-collapse-1">
+            <div class="collapse navbar-collapse" id="demo-navbar">
                 <ul class="nav navbar-nav">
                    <li class="active"><a href="#">综述</a></li>
                     <li><a href="#">简述</a></li>
                     <li class="dropdown">
                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">播放器<span class="caret"></span></a>
                      <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">QQ音乐</a></li>
-                        <li><a href="#">酷狗音乐</a></li>
-                        <li><a href="#">酷我音乐</a></li>
-                        <li><a href="#">网易云音乐</a></li>
+                        <li><a href="#tab-qq音乐">QQ音乐</a></li>
+                        <li><a href="#tab-酷狗音乐">酷狗音乐</a></li>
+                        <li><a href="#tab-酷我音乐">酷我音乐</a></li>
+                        <li><a href="#tab-网易云">网易云音乐</a></li>
                      </ul>
                     </li>
                         <li><a href="#" data-toggle="modal" data-target="#about">关于我们</a></li>
@@ -87,28 +87,28 @@
               <div class="item active">
                   <img src="image/1.jpg" alt="1 slide">
                   <div class="carousel-caption">
-                      <p>台湾歌手林宥嘉MV合集<p/>
+                      <p>台湾歌手林宥嘉MV合集</p>>
                       <p><a class="btn btn-lg btn-primary" href="#" target="_blank" role="button">点我下载</a></p>
                   </div>
               </div>
               <div class="item">
                   <img src="image/2.jpg" alt="2 slide">
                   <div class="carousel-caption">
-                      <p>香港歌手陈奕迅MV合集<p/>
+                      <p>香港歌手陈奕迅MV合集</p>>
                       <p><a class="btn btn-lg btn-primary" href="#" target="_blank" role="button">点我下载</a></p>
                   </div>
               </div>
               <div class="item">
                   <img src="image/3.jpg" alt="3 slide">
                   <div class="carousel-caption">
-                      <p>香港歌手张国荣MV合集<p/>
+                      <p>香港歌手张国荣MV合集</p>>
                       <p><a class="btn btn-lg btn-primary" href="#" target="_blank" role="button">点我下载</a></p>
                   </div>
               </div>
               <div class="item">
                   <img src="image/4.jpeg" alt="4 slide">
                    <div class="carousel-caption">
-                      <p>香港歌手杨千桦MV合集<p/>
+                      <p>香港歌手杨千桦MV合集</p>>
                       <p><a class="btn btn-lg btn-primary" href="#" target="_blank" role="button">点我下载</a></p>
                   </div>
               </div>
@@ -152,7 +152,7 @@
           </div>
           <hr class="divider">
       </div>
-      <ul class="nav nav-tabs" role="tablist" id="feature-tab">
+      <ul class="nav nav-tabs" role="tablist" id="tab-list">
         <li class="active"><a href="#tab-qq音乐" role="tab" data-toggle="tab">qq音乐</a></li>
         <li><a href="#tab-酷狗音乐" role="tab" data-toggle="tab">酷狗音乐</a></li>
         <li><a href="#tab-酷我音乐" role="tab" data-toggle="tab">酷我音乐</a></li>
@@ -262,8 +262,15 @@
             </div>
         </div>
     </div>
-
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script>
+            $(document).ready(function () {
+                $("#demo-navbar .dropdown-menu a").click(function () {
+                    var href = $(this).attr('href');
+                    $("#tab-list a[href='" + href +"']").tab("show");
+                });
+    });
+</script>
   </body>
 </html> 
