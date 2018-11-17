@@ -70,7 +70,7 @@
                         <li><a href="#">网易云音乐</a></li>
                      </ul>
                     </li>
-                        <li><a href="#">关于我们</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#about">关于我们</a></li>
                 </ul>
             </div>
         </div>
@@ -242,6 +242,27 @@
 
         <p>&copy; 2018dz </p>
     </footer>
+    <div class="modal fade" id="about">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">关闭</span></button>
+                    <h4 class="弹出框" id="modal-label">关于我们</h4>
+                </div>
+                <div class="modal-body">
+                    <p>MV下载网，让更多热爱音乐的人能够听到自己喜欢的歌曲，
+                        持续致力为用户提供个性化、多元化的音乐体验，
+                        向广大用户提供方便流畅的在线音乐和丰富多彩的音乐社区服务。
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">了解</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
   </body>
